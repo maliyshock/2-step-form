@@ -1,0 +1,8 @@
+mixin select(id, className, labelText, optionsArr, dataType)
+    .form__input-wrapper
+        label.label(for=id) #{labelText}
+        .form__input-holder.form__input-holder--arrowed
+            select.form__input.form__select.js-form-select( id=id, class=className, name=id, data-type=dataType)
+                option не выбрано
+                each item in optionsArr
+                    option(value=item.value) #{item.value}

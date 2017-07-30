@@ -1,0 +1,4 @@
+mixin radio(id, className, name, text, state)
+    label.radio(for=id)
+        input(id=id, class=className, type='radio', name=name, checked=state)
+        span.radio__text #{text}

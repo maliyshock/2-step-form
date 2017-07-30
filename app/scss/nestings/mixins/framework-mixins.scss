@@ -1,0 +1,124 @@
+
+@mixin reset-link(){
+  text-decoration: none;
+  line-height: normal;
+}
+
+@mixin reset-select () {
+  box-shadow: none;
+  background-color: transparent;
+  background-image: none;
+  appearance: none;
+}
+
+@mixin pseudo-elem(){
+  content: '';
+  position: absolute;
+  display: block;
+}
+
+@mixin inline-block(){
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+
+
+@mixin tri-r($color, $width, $height){
+  border-left: $width + 0px solid $color;
+  border-top: $height + px solid transparent;
+  border-bottom: $height / 2 +px solid transparent;
+}
+
+@mixin tri-l($color, $width, $height){
+  border-right: $width + 0px solid $color;
+  border-top: $height + px solid transparent;
+  border-bottom: $height / 2 + px solid transparent;
+}
+
+@mixin tri-t($color, $width, $height){
+  border-bottom: $height + 0px solid $color;
+  border-left: $width + px solid transparent;
+  border-right: $width + px solid transparent;
+}
+
+@mixin tri-b($color, $width, $height){
+  border-top: $height + 0px solid $color;
+  border-left: $width + px solid transparent;
+  border-right: $width + px solid transparent;
+}
+
+@mixin reset-ul{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@mixin resetInput{
+  border: none;
+  &:focus{
+    outline: none;
+  }
+
+  &:required, &:invalid  {
+    box-shadow:none;
+  }
+}
+
+@mixin resetButton{
+  padding: 0;
+  border:none;
+  box-shadow: none;
+  cursor: pointer;
+  text-align: center;
+  background-color: transparent;
+
+  &:focus{
+    outline: none;
+  }
+}
+
+@mixin makeMiddle{
+  font-size: 0;
+  &:after{
+    content:'';
+    @include inlined;
+    width: 0;
+    height: 100%;
+  }
+}
+
+@mixin placeholder($color){
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+
+  &:-moz-placeholder { /* Firefox 18- */
+    color: $color;
+  }
+
+  &::-moz-placeholder {  /* Firefox 19+ */
+    color: $color;
+  }
+
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+}
+
+
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}

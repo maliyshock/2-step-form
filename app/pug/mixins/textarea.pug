@@ -1,0 +1,4 @@
+mixin textarea(id, labelText, placeholder)
+    .form__input-wrapper
+        label.label(for=id) #{labelText}
+        textarea.form__textarea(id=id, name=id, placeholder=placeholder)

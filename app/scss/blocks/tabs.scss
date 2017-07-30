@@ -1,0 +1,45 @@
+.tabs {
+  &__list {
+    @include reset-ul;
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-bottom: 20px;
+
+    border-bottom: 1px solid $gray;
+  }
+
+  &__item {
+    &.disabled {
+      & .tabs__link {
+        pointer-events: none;
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &__link {
+    @include reset-link;
+    display: block;
+    position: relative;
+    bottom: -1px;
+
+    padding: 15px 20px;
+
+    border: 1px solid transparent;
+
+    color: $blue;
+
+    .active &  {
+      border-top: 1px solid $gray;
+      border-left: 1px solid $gray;
+      border-right: 1px solid $gray;
+      border-bottom: 1px solid white;
+
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+
+      color: #000;
+    }
+  }
+}

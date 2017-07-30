@@ -1,0 +1,5 @@
+mixin input (id, className, type, dateType, placeholder, labelText)
+    .form__input-wrapper
+        label.label.form__label(for=id) #{labelText}
+        .form__input-holder
+            input.form__input(id=id, class=className, type=type, data-type=dateType, name=id, placeholder=placeholder)

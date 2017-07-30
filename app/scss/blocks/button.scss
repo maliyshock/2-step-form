@@ -1,0 +1,17 @@
+.button {
+  @include resetButton;
+
+  padding: 10px 15px;
+
+  background-color: $blue;
+
+  border-radius: 3px;
+  border: 1px solid darken($blue, 10%);
+
+  color: #fff;
+  font-weight: bold;
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}

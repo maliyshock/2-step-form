@@ -1,0 +1,63 @@
+include ./mixins/all-mixins.pug
+
+doctype html
+html(lang='ru')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+        meta(http-equiv='X-UA-Compatible', content='ie=edge')
+        title Document
+        link(type="text/css" rel="stylesheet" href="css/index.css")
+        script(type="text/javascript" defer src="js/js.js")
+
+    body
+        .hero-wrapper
+            .wrapper
+                form.form.js-form(action='')
+                    .form__head
+                        +tabs([
+                            {'text':'Основные данные', 'href':'general', 'state':'active', 'className': 'js-general-tab'},
+                            {'text':'Адрес доставки', 'href':'adress', 'state':'disabled', 'className': 'js-adress-tab'}
+                        ])
+
+                    .form__body
+                        .rails
+                            #general.js-tab-content-container.js-first-step
+                                .form__row
+                                    +input('name', 'js-required js-input', 'text', 'text', 'Иван', 'Имя')
+                                    +input('surname', 'js-required js-input', 'text', 'text', 'Иванов', 'Фамилия')
+                                .form__row
+                                    +input('phone', 'js-required js-input', 'tel', 'tel', '+79046524783', 'Телефон')
+                                .form__row
+                                    +input('email', 'js-required js-input', 'email', 'email', 'example@example.com', 'Email')
+
+                                .form__button-area
+                                    +button('Продолжить', 'button', 'js-next', 'next', 'disabled')
+
+
+                            #adress.dnone.js-tab-content-container.js-second-step
+                                .js-radio-area.radio-area
+                                    +radio('delivery', 'js-block-togler', 'delivery_type', 'Доставка', 'checked')
+                                    +radio('pickup', 'js-block-togler', 'delivery_type', 'Самовывоз')
+
+                                .form-section.js-delivery-area
+                                    .form__row
+                                        +select(
+                                            'country', 'js-required js-input js-form-select', 'Страна',
+                                            [ {'value':'Россия'}, {'value':'США'} ],
+                                            'country'
+                                        )
+
+                                        +input('city', 'js-required js-input', 'text', 'text', 'Москва', 'Город')
+                                        +input('postcode', 'js-required js-input', 'text', 'postcode', '398000', 'Индекс')
+
+                                    .form__row
+                                        +input('adress', 'js-required js-input', 'text', 'adress', 'ул. Космонавтов 14/5', 'Адрес')
+                                    .form__row
+                                        +input('date', 'js-required js-input', 'text', 'date', '24/05/2017', 'Дата доставки')
+
+                                .form-section.js-pickup-area
+                                    .form__row
+                                        +textarea('comment', 'Комментарий к заказу', 'Ваш комментарий здесь...')
+                                    .form__button-area
+                                        +button('Оформить заказ', 'button', 'js-finish', 'finish', 'disabled')

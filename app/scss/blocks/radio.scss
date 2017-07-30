@@ -1,0 +1,15 @@
+.radio {
+  display: block;
+
+  margin-bottom: 15px;
+
+  cursor: pointer;
+
+  &__text {
+    margin-left: 5px;
+  }
+}
+
+.radio-area {
+  margin-bottom: 25px;
+}

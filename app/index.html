@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="css/index.css">
+    <script type="text/javascript" defer src="js/js.js"></script>
+  </head>
+  <body>
+    <div class="hero-wrapper">
+      <div class="wrapper">
+        <form class="form js-form" action="">
+          <div class="form__head">
+            <div class="tabs js-tabs">
+              <ul class="tabs__list">
+                <li class="tabs__item active js-general-tab"><a class="tabs__link js-tab" href="#general">Основные данные</a></li>
+                <li class="tabs__item disabled js-adress-tab"><a class="tabs__link js-tab" href="#adress">Адрес доставки</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="form__body">
+            <div class="rails">
+              <div class="js-tab-content-container js-first-step" id="general">
+                <div class="form__row">
+                  <div class="form__input-wrapper">
+                    <label class="label form__label" for="name">Имя</label>
+                    <div class="form__input-holder">
+                      <input class="form__input js-required js-input" id="name" type="text" data-type="text" name="name" placeholder="Иван"/>
+                    </div>
+                  </div>
+                  <div class="form__input-wrapper">
+                    <label class="label form__label" for="surname">Фамилия</label>
+                    <div class="form__input-holder">
+                      <input class="form__input js-required js-input" id="surname" type="text" data-type="text" name="surname" placeholder="Иванов"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__row">
+                  <div class="form__input-wrapper">
+                    <label class="label form__label" for="phone">Телефон</label>
+                    <div class="form__input-holder">
+                      <input class="form__input js-required js-input" id="phone" type="tel" data-type="tel" name="phone" placeholder="+79046524783"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__row">
+                  <div class="form__input-wrapper">
+                    <label class="label form__label" for="email">Email</label>
+                    <div class="form__input-holder">
+                      <input class="form__input js-required js-input" id="email" type="email" data-type="email" name="email" placeholder="example@example.com"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__button-area">
+                  <button class="button js-next" id="next" type="button" disabled="disabled">Продолжить</button>
+                </div>
+              </div>
+              <div class="dnone js-tab-content-container js-second-step" id="adress">
+                <div class="js-radio-area radio-area">
+                  <label class="radio" for="delivery">
+                    <input class="js-block-togler" id="delivery" type="radio" name="delivery_type" checked="checked"/><span class="radio__text">Доставка</span>
+                  </label>
+                  <label class="radio" for="pickup">
+                    <input class="js-block-togler" id="pickup" type="radio" name="delivery_type"/><span class="radio__text">Самовывоз</span>
+                  </label>
+                </div>
+                <div class="form-section js-delivery-area">
+                  <div class="form__row">
+                    <div class="form__input-wrapper">
+                      <label class="label" for="country">Страна</label>
+                      <div class="form__input-holder form__input-holder--arrowed">
+                        <select class="form__input form__select js-form-select js-required js-input js-form-select" id="country" name="country" data-type="country">
+                          <option>не выбрано</option>
+                          <option value="Россия">Россия</option>
+                          <option value="США">США</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form__input-wrapper">
+                      <label class="label form__label" for="city">Город</label>
+                      <div class="form__input-holder">
+                        <input class="form__input js-required js-input" id="city" type="text" data-type="text" name="city" placeholder="Москва"/>
+                      </div>
+                    </div>
+                    <div class="form__input-wrapper">
+                      <label class="label form__label" for="postcode">Индекс</label>
+                      <div class="form__input-holder">
+                        <input class="form__input js-required js-input" id="postcode" type="text" data-type="postcode" name="postcode" placeholder="398000"/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form__row">
+                    <div class="form__input-wrapper">
+                      <label class="label form__label" for="adress">Адрес</label>
+                      <div class="form__input-holder">
+                        <input class="form__input js-required js-input" id="adress" type="text" data-type="adress" name="adress" placeholder="ул. Космонавтов 14/5"/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form__row">
+                    <div class="form__input-wrapper">
+                      <label class="label form__label" for="date">Дата доставки</label>
+                      <div class="form__input-holder">
+                        <input class="form__input js-required js-input" id="date" type="text" data-type="date" name="date" placeholder="24/05/2017"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-section js-pickup-area">
+                  <div class="form__row">
+                    <div class="form__input-wrapper">
+                      <label class="label" for="comment">Комментарий к заказу</label>
+                      <textarea class="form__textarea" id="comment" name="comment" placeholder="Ваш комментарий здесь..."></textarea>
+                    </div>
+                  </div>
+                  <div class="form__button-area">
+                    <button class="button js-finish" id="finish" type="button" disabled="disabled">Оформить заказ</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
