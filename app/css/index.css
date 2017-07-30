@@ -400,9 +400,6 @@ th {
   margin-left: -20px;
   margin-right: -20px; }
 
-.form__row + .form__row {
-  margin-top: 20px; }
-
 .form__input-wrapper {
   -ms-flex-positive: 1;
       flex-grow: 1;
@@ -410,6 +407,7 @@ th {
       flex-shrink: 0;
   -ms-flex-preferred-size: 0;
       flex-basis: 0;
+  margin-top: 20px;
   padding-left: 20px;
   padding-right: 20px;
   min-width: 200px; }
@@ -527,6 +525,11 @@ body, html {
   margin-bottom: 20px;
   border-bottom: 1px solid #DDDDDD; }
 
+@media (max-width: 599px) {
+  .tabs__item {
+    width: 100%;
+    text-align: center; } }
+
 .tabs__item.disabled .tabs__link {
   pointer-events: none;
   opacity: 0.5; }
@@ -534,9 +537,10 @@ body, html {
 .tabs__link {
   text-decoration: none;
   line-height: normal;
-  display: block;
   position: relative;
   bottom: -1px;
+  display: block;
+  width: 100%;
   padding: 15px 20px;
   border: 1px solid transparent;
   color: #337AB7; }

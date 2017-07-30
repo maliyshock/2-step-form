@@ -10,6 +10,13 @@
   }
 
   &__item {
+
+    @include for-phone-only {
+      width: 100%;
+
+      text-align: center;
+    }
+
     &.disabled {
       & .tabs__link {
         pointer-events: none;
@@ -20,9 +27,12 @@
 
   &__link {
     @include reset-link;
-    display: block;
     position: relative;
     bottom: -1px;
+
+    display: block;
+
+    width: 100%;
 
     padding: 15px 20px;
 
