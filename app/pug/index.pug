@@ -16,13 +16,13 @@ html(lang='ru')
                 form.form.js-form(action='')
                     .form__head
                         +tabs([
-                            {'text':'Основные данные', 'href':'general', 'state':'active', 'className': 'js-general-tab'},
-                            {'text':'Адрес доставки', 'href':'adress', 'state':'disabled', 'className': 'js-adress-tab'}
+                            {'text':'Основные данные', 'href':'general', 'state':'active', 'className': 'js-general-tab', 'id':'generalTab'},
+                            {'text':'Адрес доставки', 'href':'adress', 'state':'disabled', 'className': 'js-adress-tab', 'id':'adressTab'}
                         ])
 
                     .form__body
                         .rails
-                            #general.js-tab-content-container.js-first-step
+                            #general.js-tab-content-container.js-first-step(role="tabpanel", aria-labelledby="generalTab")
                                 .form__row
                                     +input('name', 'js-required js-input', 'text', 'text', 'Иван', 'Имя')
                                     +input('surname', 'js-required js-input', 'text', 'text', 'Иванов', 'Фамилия')
@@ -35,7 +35,7 @@ html(lang='ru')
                                     +button('Продолжить', 'button', 'js-next', 'next', 'disabled')
 
 
-                            #adress.dnone.js-tab-content-container.js-second-step
+                            #adress.dnone.js-tab-content-container.js-second-step(role="tabpanel", aria-labelledby="adresslTab")
                                 .js-radio-area.radio-area
                                     +radio('delivery', 'js-block-togler', 'delivery_type', 'Доставка', 'checked')
                                     +radio('pickup', 'js-block-togler', 'delivery_type', 'Самовывоз')

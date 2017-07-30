@@ -2,5 +2,5 @@ mixin tabs(itemsArr)
     .tabs.js-tabs
         ul.tabs__list
             each item in itemsArr
-                li.tabs__item(class=item.state class=item.className)
+                li.tabs__item(class=item.state class=item.className, role="tab", id=item.id)
                     a.tabs__link.js-tab( href='#'+ item.href) #{item.text}

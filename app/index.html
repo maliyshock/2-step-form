@@ -15,14 +15,14 @@
           <div class="form__head">
             <div class="tabs js-tabs">
               <ul class="tabs__list">
-                <li class="tabs__item active js-general-tab"><a class="tabs__link js-tab" href="#general">Основные данные</a></li>
-                <li class="tabs__item disabled js-adress-tab"><a class="tabs__link js-tab" href="#adress">Адрес доставки</a></li>
+                <li class="tabs__item active js-general-tab" role="tab" id="generalTab"><a class="tabs__link js-tab" href="#general">Основные данные</a></li>
+                <li class="tabs__item disabled js-adress-tab" role="tab" id="adressTab"><a class="tabs__link js-tab" href="#adress">Адрес доставки</a></li>
               </ul>
             </div>
           </div>
           <div class="form__body">
             <div class="rails">
-              <div class="js-tab-content-container js-first-step" id="general">
+              <div class="js-tab-content-container js-first-step" id="general" role="tabpanel" aria-labelledby="generalTab">
                 <div class="form__row">
                   <div class="form__input-wrapper">
                     <label class="label form__label" for="name">Имя</label>
@@ -57,7 +57,7 @@
                   <button class="button js-next" id="next" type="button" disabled="disabled">Продолжить</button>
                 </div>
               </div>
-              <div class="dnone js-tab-content-container js-second-step" id="adress">
+              <div class="dnone js-tab-content-container js-second-step" id="adress" role="tabpanel" aria-labelledby="adresslTab">
                 <div class="js-radio-area radio-area">
                   <label class="radio" for="delivery">
                     <input class="js-block-togler" id="delivery" type="radio" name="delivery_type" checked="checked"/><span class="radio__text">Доставка</span>
