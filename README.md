@@ -1,10 +1,10 @@
 # 2-step-form
 
 ## Build Project Environment
-Into your terminal, go to the root folder of project, and there run npm install to build dependencies
-after that run php -S localhost:8000 -t app/ to build up local php server
-then go to http://localhost:8000/ in your browser
-if you want to rebuild styles and html run gulp
+Into your terminal, go to the root folder of project, and there run npm install to build dependencies<br/>
+after that run php -S localhost:8000 -t app/ to build up local php server<br/>
+then go to http://localhost:8000/ in your browser<br/>
+if you want to rebuild styles and html run gulp<br/>
 
 Features:
 - responsive (didnt know how to make tabs better for you guys. Have no instructions for that, so i let them be just flex elements with full width on mobile)
